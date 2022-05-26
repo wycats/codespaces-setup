@@ -14,7 +14,8 @@ function install_volta() {
   curl https://get.volta.sh | bash
 
   echo "Creating symlink" >&3
-  ln -sf $HOME/.volta/bin/volta $HOME/.local/bin/volta
+  rm -f $HOME/.local/bin/volta
+  ln -s $HOME/.volta/bin/volta $HOME/.local/bin/volta
 }
 
 function install_tool() {
