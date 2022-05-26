@@ -22,9 +22,9 @@ function install_tool() {
   echo "Installing $1" >&3
   # install @$2, defaulting to @latest
   if [ -z "$2" ]; then
-    volta install $1@latest
+    $HOME/.volta/bin/volta install $1@latest
   else
-    volta install $1@$2
+    $HOME/.volta/bin/volta install $1@$2
   fi
 }
 
